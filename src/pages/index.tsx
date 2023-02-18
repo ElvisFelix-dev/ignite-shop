@@ -1,13 +1,23 @@
-import Head from 'next/head'
+import { styled } from '../styles'
+
+const Button = styled('button', {
+  backgroundColor: '$rocketseat',
+  borderRadius: 8,
+  width: 90,
+  height: 35,
+  border: 'CanvasText',
+  cursor: 'pointer',
+  transition: 'all',
+
+  '&:hover': {
+    filter: 'brightness(0.8)',
+  },
+})
 
 export default function Home() {
   return (
     <>
-      <Head>
-        <title>Ignite Shop</title>
-      </Head>
-
-      <h1>Hello World</h1>
+      <Button>Enviar</Button>
     </>
   )
 }
