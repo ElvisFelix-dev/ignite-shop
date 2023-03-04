@@ -6,6 +6,12 @@ export const Container = styled('div', {
   alignItems: 'flex-start',
   justifyContent: 'center',
   minHeight: '100vh',
+
+  // Tornar o conteúdo centralizado em telas menores
+  '@media screen and (max-width: 767px)': {
+    alignItems: 'center',
+    padding: '1rem',
+  },
 })
 
 export const Header = styled('header', {
@@ -13,4 +19,9 @@ export const Header = styled('header', {
   width: '100%',
   maxWidth: 1100,
   margin: '0 auto',
+
+  // Reduzir a largura do cabeçalho em telas menores
+  '@media screen and (max-width: 767px)': {
+    maxWidth: 600,
+  },
 })
