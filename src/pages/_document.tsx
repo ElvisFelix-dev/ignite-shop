@@ -16,7 +16,7 @@ export default function Document() {
           name="description"
           content="Aplicação desenvolvida na Trilha Frontend do Ignite, pela Rocketseat"
         />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
         <meta name="author" content="Elvis Felix" />
         <link rel="icon" href="/favicon.ico" />
         <link

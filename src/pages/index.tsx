@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import { GetStaticProps } from 'next'
 import Stripe from 'stripe'
 import { useKeenSlider } from 'keen-slider/react'
@@ -13,7 +14,7 @@ interface HomeProps {
     id: string
     name: string
     imageURL: string
-    price: number
+    price: string
   }[]
 }
 
@@ -28,7 +29,11 @@ export default function Home({ products }: HomeProps) {
     <HomeContainer ref={sliderRef} className="keen-slider">
       {products.map((product) => {
         return (
-          <Product key={product.id} className="keen-slider__slide">
+          <Product
+            key={product.id}
+            href={`/product/${product.id}`}
+            className="keen-slider__slide"
+          >
             <Image src={product.imageURL} width={520} height={480} alt="" />
 
             <footer>
