@@ -12,8 +12,8 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <Container>
       <Head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Ignite Shop</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <Header>
         <Image src={imgLogo} alt="Logo ignite" />
